@@ -15,3 +15,11 @@ counts_df = load_example_data(
 )
 
 print(counts_df)
+
+metadata = load_example_data(
+    modality="metadata",
+    dataset="synthetic",
+    debug=False,
+)
+
+print(metadata)
