@@ -10,6 +10,8 @@
 
 ## How to run:
 #### Using Conda
+```
 conda env create -n pydeseq2
 conda activate pydeseq2
 pip install pydeseq2
+```
