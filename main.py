@@ -8,7 +8,7 @@ from pydeseq2.utils import load_example_data
 
 # load count data from airway_scaledcounts csv file
 counts_df = pd.read_csv('airway_scaledcounts.csv')
-print(counts_df)
+#print(counts_df)
 
 # load count data from airway_metadata csv file
 metadata = pd.read_csv('airway_metadata.csv')
@@ -18,11 +18,11 @@ print(metadata)
 
 # get list of sample names
 samples = counts_df.columns.values
-print(samples, type(samples))
+#print(samples, type(samples))
 
 # convert ndarray to list
 samples = samples.tolist()
-print(samples)
+#print(samples)
 
 # remove element that is not a sample name
 samples.pop(0)
@@ -42,5 +42,3 @@ dds = DeseqDataSet(
         refit_cooks=True,
         inference=inference
         )
-
-
