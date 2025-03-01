@@ -29,3 +29,15 @@ metadata = load_example_data(
 print(metadata)
 
 
+# refit = True not necessary  due to no outliers in synthetic data
+inference = DefaultInference(n_cpus=8)
+dds = DeseqDataSet(
+    counts=counts_df,
+    metadata=metadata,
+    design="~condition",  # compare samples based on the "condition"
+    # column ("B" vs "A")
+    refit_cooks=True,
+    inference=inference,
+)
+
+print(dds)
