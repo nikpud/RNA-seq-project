@@ -14,3 +14,17 @@ print(counts_df)
 metadata = pd.read_csv('airway_metadata.csv')
 print(metadata)
 
+# need to convert counts data from floats to integers
+
+# get list of sample names
+samples = counts_df.columns.values
+print(samples, type(samples))
+
+# convert ndarray to list
+samples = samples.tolist()
+print(samples)
+
+# remove element that is not a sample name
+samples.pop(0)
+print(samples)
+
