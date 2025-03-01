@@ -34,6 +34,13 @@ for sample in samples:
 
 print(counts_df)
 
-
+inference = DefaultInference(n_cpus=4)
+dds = DeseqDataSet(
+        counts=counts_df,
+        metadata=metadata,
+        design="~dex",
+        refit_cooks=True,
+        inference=inference
+        )
 
 
