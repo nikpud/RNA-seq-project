@@ -10,4 +10,7 @@ from pydeseq2.utils import load_example_data
 counts_df = pd.read_csv('airway_scaledcounts.csv')
 print(counts_df)
 
+# load count data from airway_metadata csv file
+metadata = pd.read_csv('airway_metadata.csv')
+print(metadata)
 
