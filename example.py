@@ -8,3 +8,10 @@ from pydeseq2.default_inference import DefaultInference
 from pydeseq2.ds import DeseqStats
 from pydeseq2.utils import load_example_data
 
+counts_df = load_example_data(
+    modality="raw_counts",
+    dataset="synthetic",
+    debug=False,
+)
+
+print(counts_df)
