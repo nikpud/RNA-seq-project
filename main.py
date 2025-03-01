@@ -28,3 +28,12 @@ print(samples)
 samples.pop(0)
 print(samples)
 
+# convert columns (samples) to int
+for sample in samples:
+    counts_df = counts_df.astype({sample:'int'})
+
+print(counts_df)
+
+
+
+
